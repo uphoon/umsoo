@@ -3,24 +3,29 @@
 <div class="outer" @click="getMakeNum()">
 <div class="inner mdc-typography--headline1">
 
-
-<div class="flex-end">
-<div id="q01">{{qNum.Q01}}</div>
-</div>
-<div class="flex-between">
-<div class="mdc-typography--headline3 plusMark">+</div>
-<div id="q02">{{qNum.Q02}}</div>
-</div>
-
-  <div>
-    <div id="eq1"><hr/></div>
-    <div id="eq2">=</div>
+  <div id="wrp_work" style="display: flex;">
+    <div style="width:45%">
+      <div>&nbsp;</div>
+      <div style="text-align: left; padding-top:2rem" class=" mdc-typography--headline3">+</div>
+    </div>
+    <div style="width:fill">
+      <div id="q01">{{qNum.Q01}}</div>
+      <div id="q02">{{qNum.Q02}}</div>
+    </div>
   </div>
-  
-<div class="flex-end">
-<div v-show="isRsltShow">{{qNum.SUM}}</div>
-</div>
 
+  <div id="wrp_line" class="center">
+    <hr />
+  </div>
+
+  <div id="wrp_answ" style="display: flex;">
+    <div  style="width:45%">
+      &nbsp;
+    </div>
+    <div style="width: fill;">
+      <div v-show="isRsltShow">{{qNum.SUM}}</div>
+    </div>
+  </div>
   
 </div>
 </div>
@@ -80,7 +85,6 @@ export default {
   
 </script>
 
-
 <style scoped>
 
 html, body {
@@ -97,6 +101,7 @@ hr {
   border: 1px #cccccc solid;
   color : #cccccc;
   text-align: center;
+  width: 80%;
   margin: 5px 0 5px 0;
 }
       
@@ -114,39 +119,6 @@ hr {
 .inner {
   width:50%;
   margin: auto;
-}
-
-#eq2 {
-  display: none;
-}
-
-.flex-end {
-  display: flex;
-  justify-content:flex-end;
-}
-
-.flex-between {
-  display: flex;
-  justify-content:space-between;
-}
-
-.plusMark {
-  align-self:flex-end;
-}
-@media screen and (orientation: landscape) {
-  .inner {
-    display: flex;
-    margin: auto;
-  }
-  #eq1 {display: none;}
-  #eq2 {
-    display: block;
-    padding: 0 25px 0 25px;
-  }
-  .plusMark {
-    align-self:center;
-    padding: 0 25px 0 25px;
-  }
 }
   
 </style>
