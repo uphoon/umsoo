@@ -12,6 +12,7 @@ export default {
       port: 443,
     }
   },
+  base : '/umsoo/',
   build: {
     outDir: './docs'
   }
