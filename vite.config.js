@@ -11,5 +11,8 @@ export default {
     hmr: {
       port: 443,
     }
+  },
+  build: {
+    outDir: './docs'
   }
 }
