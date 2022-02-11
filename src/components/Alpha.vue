@@ -100,7 +100,9 @@ hr {
 
 .outer {
   display: flex;
-  margin-top : 50px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .inner {
